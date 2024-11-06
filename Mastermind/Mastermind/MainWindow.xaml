@@ -5,9 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mastermind"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1400">
+        Title="Mastermind" Height="800" Width="1400"
+        Name="MastermindWindow">
     <Grid>
-        <ComboBox FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DropDownClosed="code1ComboBox_DropDownClosed"  Name="code1ComboBox" HorizontalAlignment="Left" Margin="35,26,0,0" VerticalAlignment="Top" Width="250" Height="45">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="1247*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DropDownClosed="code1ComboBox_DropDownClosed"  Name="code1ComboBox" HorizontalAlignment="Left" Margin="35,26,0,0" VerticalAlignment="Top" Width="250" Height="45" Grid.ColumnSpan="2">
             <ComboBoxItem Content=""></ComboBoxItem>
             <ComboBoxItem Content="Red"></ComboBoxItem>
             <ComboBoxItem Content="Yellow"></ComboBoxItem>
@@ -16,7 +21,7 @@
             <ComboBoxItem Content="Orange"></ComboBoxItem>
             <ComboBoxItem Content="White"></ComboBoxItem>
         </ComboBox>
-        <ComboBox FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DropDownClosed="code2ComboBox_DropDownClosed"  Name="code2ComboBox" HorizontalAlignment="Left" Margin="340,26,0,0" VerticalAlignment="Top" Width="250" Height="45">
+        <ComboBox FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DropDownClosed="code2ComboBox_DropDownClosed"  Name="code2ComboBox" HorizontalAlignment="Left" Margin="187,26,0,0" VerticalAlignment="Top" Width="250" Height="45" Grid.Column="1">
             <ComboBoxItem Content=""></ComboBoxItem>
             <ComboBoxItem Content="Red"></ComboBoxItem>
             <ComboBoxItem Content="Yellow"></ComboBoxItem>
@@ -25,7 +30,7 @@
             <ComboBoxItem Content="Orange"></ComboBoxItem>
             <ComboBoxItem Content="White"></ComboBoxItem>
         </ComboBox>
-        <ComboBox FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DropDownClosed="code3ComboBox_DropDownClosed"  Name="code3ComboBox" HorizontalAlignment="Left" Margin="655,26,0,0" VerticalAlignment="Top" Width="250" Height="45">
+        <ComboBox FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DropDownClosed="code3ComboBox_DropDownClosed"  Name="code3ComboBox" HorizontalAlignment="Left" Margin="502,26,0,0" VerticalAlignment="Top" Width="250" Height="45" Grid.Column="1">
             <ComboBoxItem Content=""></ComboBoxItem>
             <ComboBoxItem Content="Red"></ComboBoxItem>
             <ComboBoxItem Content="Yellow"></ComboBoxItem>
@@ -34,7 +39,7 @@
             <ComboBoxItem Content="Orange"></ComboBoxItem>
             <ComboBoxItem Content="White"></ComboBoxItem>
         </ComboBox>
-        <ComboBox FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DropDownClosed="code4ComboBox_DropDownClosed" Name="code4ComboBox" HorizontalAlignment="Left" Margin="965,26,0,0" VerticalAlignment="Top" Width="250" Height="45">
+        <ComboBox FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DropDownClosed="code4ComboBox_DropDownClosed" Name="code4ComboBox" HorizontalAlignment="Left" Margin="812,26,0,0" VerticalAlignment="Top" Width="250" Height="45" Grid.Column="1">
             <ComboBoxItem Content=""></ComboBoxItem>
             <ComboBoxItem Content="Red"></ComboBoxItem>
             <ComboBoxItem Content="Yellow"></ComboBoxItem>
@@ -43,10 +48,11 @@
             <ComboBoxItem Content="Orange"></ComboBoxItem>
             <ComboBoxItem Content="White"></ComboBoxItem>
         </ComboBox>
-        <Label Name="code1Label" Content="" HorizontalAlignment="Left" Margin="52,100,0,0" VerticalAlignment="Top" Height="111" Width="217"/>
-        <Label Name="code2Label" Content="" HorizontalAlignment="Left" Margin="356,100,0,0" VerticalAlignment="Top" Height="111" Width="218"/>
-        <Label Name="code3Label" Content="" HorizontalAlignment="Left" Margin="671,100,0,0" VerticalAlignment="Top" Height="111" Width="218"/>
-        <Label Name="code4Label" Content="" HorizontalAlignment="Left" Margin="981,100,0,0" VerticalAlignment="Top" Height="111" Width="218"/>
-        <Button Click="controlButton_Click" Name="controlButton" Content="Controleer code" Padding="8" HorizontalAlignment="Left" Margin="530,268,0,0" VerticalAlignment="Top" Width="183"/>
+        <Label Name="code1Label" Content="" HorizontalAlignment="Left" Margin="52,100,0,0" VerticalAlignment="Top" Height="111" Width="217" Grid.ColumnSpan="2"/>
+        <Label Name="code2Label" Content="" HorizontalAlignment="Left" Margin="203,100,0,0" VerticalAlignment="Top" Height="111" Width="218" Grid.Column="1"/>
+        <Label Name="code3Label" Content="" HorizontalAlignment="Left" Margin="518,100,0,0" VerticalAlignment="Top" Height="111" Width="218" Grid.Column="1"/>
+        <Label Name="code4Label" Content="" HorizontalAlignment="Left" Margin="828,100,0,0" VerticalAlignment="Top" Height="111" Width="218" Grid.Column="1"/>
+        <Button Click="controlButton_Click" Name="controlButton" Content="Controleer code" Padding="8" HorizontalAlignment="Left" Margin="377,268,0,0" VerticalAlignment="Top" Width="183" Grid.Column="1"/>
+        <Button Click="generateButton_Click" x:Name="generateButton_Copy" Content="Genereer code" Padding="8" HorizontalAlignment="Left" Margin="149,268,0,0" VerticalAlignment="Top" Width="183" Grid.Column="1"/>
     </Grid>
 </Window>

@@ -27,7 +27,8 @@ namespace Mastermind
             {
                 code1Label.Background = Brushes.Red;
             }
-            else if(code1ComboBox.Text == "Green"){
+            else if (code1ComboBox.Text == "Green")
+            {
                 code1Label.Background = Brushes.Green;
             }
             else if (code1ComboBox.Text == "Blue")
@@ -145,6 +146,130 @@ namespace Mastermind
             else
             {
                 code4Label.Background = Brushes.Transparent;
+            }
+        }
+
+        private void generateButton_Click(object sender, RoutedEventArgs e)
+        {
+            Random rnd = new Random();
+
+            int colorCode1 = rnd.Next(0, 24);
+            int colorCode2 = rnd.Next(0, 24);
+            int colorCode3 = rnd.Next(0, 24);
+            int colorCode4 = rnd.Next(0, 24);
+
+            MastermindWindow.Title = "Mastermind";
+
+            switch (colorCode1 % 6)
+            {
+                case 0:
+                    MastermindWindow.Title += "\tRed,";
+                    colorCode1 = 0;
+                    break;
+                case 1:
+                    MastermindWindow.Title += "\tYellow,";
+                    colorCode1 = 1;
+                    break;
+                case 2:
+                    MastermindWindow.Title +=  "\tGreen,";
+                    colorCode1 = 2;
+                    break;
+                case 3:
+                    MastermindWindow.Title += "\tBlue,";
+                    colorCode1 = 3;
+                    break;
+                case 4:
+                    MastermindWindow.Title += "\tOrange,";
+                    colorCode1 = 4;
+                    break;
+                default:
+                    MastermindWindow.Title += "\tWhite,";
+                    colorCode1 = 5;
+                    break;
+            }
+
+            switch (colorCode2 % 6)
+            {
+                case 0:
+                    MastermindWindow.Title += " Red,";
+                    colorCode2 = 0;
+                    break;
+                case 1:
+                    MastermindWindow.Title += " Yellow,";
+                    colorCode2 = 1;
+                    break;
+                case 2:
+                    MastermindWindow.Title += " Green,";
+                    colorCode2 = 2;
+                    break;
+                case 3:
+                    MastermindWindow.Title += " Blue,";
+                    colorCode2 = 3;
+                    break;
+                case 4:
+                    MastermindWindow.Title += " Orange,";
+                    colorCode2 = 4;
+                    break;
+                default:
+                    MastermindWindow.Title += " White,";
+                    colorCode2 = 5;
+                    break;
+            }
+
+            switch (colorCode3 % 6)
+            {
+                case 0:
+                    MastermindWindow.Title += " Red,";
+                    colorCode3 = 0;
+                    break;
+                case 1:
+                    MastermindWindow.Title += " Yellow,";
+                    colorCode3 = 1;
+                    break;
+                case 2:
+                    MastermindWindow.Title += " Green,";
+                    colorCode3 = 2;
+                    break;
+                case 3:
+                    MastermindWindow.Title += " Blue,";
+                    colorCode3 = 3;
+                    break;
+                case 4:
+                    MastermindWindow.Title += " Orange,";
+                    colorCode3 = 4;
+                    break;
+                default:
+                    MastermindWindow.Title += " White,";
+                    colorCode3 = 5;
+                    break;
+            }
+
+            switch (colorCode4 % 6)
+            {
+                case 0:
+                    MastermindWindow.Title += " Red";
+                    colorCode4 = 0;
+                    break;
+                case 1:
+                    MastermindWindow.Title += " Yellow";
+                    colorCode4 = 1;
+                    break;
+                case 2:
+                    MastermindWindow.Title += " Green";
+                    colorCode4 = 2;
+                    break;
+                case 3:
+                    MastermindWindow.Title += " Blue";
+                    colorCode4 = 3;
+                    break;
+                case 4:
+                    MastermindWindow.Title += " Orange";
+                    colorCode4 = 4;
+                    break;
+                default:
+                    MastermindWindow.Title += " White";
+                    colorCode4 = 5;
+                    break;
             }
         }
 
