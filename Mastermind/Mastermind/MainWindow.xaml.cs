@@ -212,7 +212,7 @@ namespace Mastermind
                     MastermindWindow.Title += "\tGreen,";
                     colorCode1 = 5;
                     break;
-                default:
+                case 5:
                     MastermindWindow.Title += "\tBlue,";
                     colorCode1 = 6;
                     break;
@@ -240,7 +240,7 @@ namespace Mastermind
                     MastermindWindow.Title += " Green,";
                     colorCode2 = 5;
                     break;
-                default:
+                case 5:
                     MastermindWindow.Title += " Blue,";
                     colorCode2 = 6;
                     break;
@@ -268,7 +268,7 @@ namespace Mastermind
                     MastermindWindow.Title += " Green,";
                     colorCode3 = 5;
                     break;
-                default:
+                case 5:
                     MastermindWindow.Title += " Blue,";
                     colorCode3 = 6;
                     break;
@@ -296,7 +296,7 @@ namespace Mastermind
                     MastermindWindow.Title += " Green";
                     colorCode4 = 5;
                     break;
-                default:
+                case 5:
                     MastermindWindow.Title += " Blue";
                     colorCode4 = 6;
                     break;
@@ -309,15 +309,15 @@ namespace Mastermind
         {
             // Resetten waardes
 
-            bool gezien1 = false;
-            bool gezien2 = false;
-            bool gezien3 = false;
-            bool gezien4 = false;
+            bool colorPosition1 = false;
+            bool colorPosition2 = false;
+            bool colorPosition3 = false;
+            bool colorPosition4 = false;
 
-            bool positie1 = false;
-            bool positie2 = false;
-            bool positie3 = false;
-            bool positie4 = false;
+            bool color1 = false;
+            bool color2 = false;
+            bool color3 = false;
+            bool color4 = false;
 
             // resetten randen
 
@@ -336,106 +336,106 @@ namespace Mastermind
                 if (colorCode1 == code1ComboBox.SelectedIndex)
                 {
                     code1Label.BorderBrush = Brushes.DarkRed;
-                    gezien1 = true;
-                    positie1 = true;
+                    colorPosition1 = true;
+                    color1 = true;
                 }
 
                 if (colorCode2 == code2ComboBox.SelectedIndex)
                 {
                     code2Label.BorderBrush = Brushes.DarkRed;
-                    gezien2 = true;
-                    positie2 = true;
+                    colorPosition2 = true;
+                    color2 = true;
                 }
 
                 if (colorCode3 == code3ComboBox.SelectedIndex)
                 {
                     code3Label.BorderBrush = Brushes.DarkRed;
-                    gezien3 = true;
-                    positie3 = true;
+                    colorPosition3 = true;
+                    color3 = true;
                 }
 
                 if (colorCode4 == code4ComboBox.SelectedIndex)
                 {
                     code4Label.BorderBrush = Brushes.DarkRed;
-                    gezien4 = true;
-                    positie4 = true;
+                    colorPosition4 = true;
+                    color4 = true;
                 }
 
                 // Checken of de kleur ergens anders voorkomt
 
-                if (gezien1 == false)
+                if (colorPosition1 == false)
                 {
-                    if (code1ComboBox.SelectedIndex == colorCode2 && positie2 == false)
+                    if (code1ComboBox.SelectedIndex == colorCode2 && color2 == false)
                     {
                         code1Label.BorderBrush = Brushes.Wheat;
-                        positie2 = true;
+                        color2 = true;
                     }
-                    else if (code1ComboBox.SelectedIndex == colorCode3 && positie3 == false)
+                    else if (code1ComboBox.SelectedIndex == colorCode3 && color3 == false)
                     {
                         code1Label.BorderBrush = Brushes.Wheat;
-                        positie3 = true;
+                        color3 = true;
                     }
-                    else if (code1ComboBox.SelectedIndex == colorCode4 && positie4 == false)
+                    else if (code1ComboBox.SelectedIndex == colorCode4 && color4 == false)
                     {
                         code1Label.BorderBrush = Brushes.Wheat;
-                        positie4 = true;
+                        color4 = true;
                     }
                 }
 
-                if (gezien2 == false)
+                if (colorPosition2 == false)
                 {
-                    if (code2ComboBox.SelectedIndex == colorCode1 && positie1 == false)
+                    if (code2ComboBox.SelectedIndex == colorCode1 && color1 == false)
                     {
                         code2Label.BorderBrush = Brushes.Wheat;
-                        positie1 = true;
+                        color1 = true;
                     }
-                    else if (code2ComboBox.SelectedIndex == colorCode3 && positie3 == false)
+                    else if (code2ComboBox.SelectedIndex == colorCode3 && color3 == false)
                     {
                         code2Label.BorderBrush = Brushes.Wheat;
-                        positie3 = true;
+                        color3 = true;
                     }
-                    else if (code2ComboBox.SelectedIndex == colorCode4 && positie4 == false)
+                    else if (code2ComboBox.SelectedIndex == colorCode4 && color4 == false)
                     {
                         code2Label.BorderBrush = Brushes.Wheat;
-                        positie4 = true;
+                        color4 = true;
                     }
                 }
 
-                if (gezien3 == false)
+                if (colorPosition3 == false)
                 {
-                    if (code3ComboBox.SelectedIndex == colorCode1 && positie1 == false)
+                    if (code3ComboBox.SelectedIndex == colorCode1 && color1 == false)
                     {
                         code3Label.BorderBrush = Brushes.Wheat;
-                        positie1 = true;
+                        color1 = true;
                     }
-                    else if (code3ComboBox.SelectedIndex == colorCode2 && positie2 == false)
+                    else if (code3ComboBox.SelectedIndex == colorCode2 && color2 == false)
                     {
                         code3Label.BorderBrush = Brushes.Wheat;
-                        positie2 = true;
+                        color2 = true;
                     }
-                    else if (code3ComboBox.SelectedIndex == colorCode4 && positie4 == false)
+                    else if (code3ComboBox.SelectedIndex == colorCode4 && color4 == false)
                     {
                         code3Label.BorderBrush = Brushes.Wheat;
-                        positie4 = true;
+                        color4 = true;
                     }
                 }
 
-                if (gezien4 == false)
+                if (colorPosition4 == false)
                 {
-                    if (code4ComboBox.SelectedIndex == colorCode1 && positie1 == false)
+                    if (code4ComboBox.SelectedIndex == colorCode1 && color1 == false)
                     {
                         code4Label.BorderBrush = Brushes.Wheat;
-                        positie1 = true;
+                        color1 = true;
                     }
-                    else if (code4ComboBox.SelectedIndex == colorCode2 && positie2 == false)
+                    else if (code4ComboBox.SelectedIndex == colorCode2 && color2 == false)
                     {
                         code4Label.BorderBrush = Brushes.Wheat;
-                        positie2 = true;
+                        color2 = true;
                     }
-                    else if (code4ComboBox.SelectedIndex == colorCode3 && positie3 == false)
+                    else if (code4ComboBox.SelectedIndex == colorCode3 && color3 == false)
                     {
                         code4Label.BorderBrush = Brushes.Wheat;
-                        positie3 = true;
+                        color3 = true;
                     }
                 }
             }
